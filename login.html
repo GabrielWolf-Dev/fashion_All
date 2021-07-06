@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Cadastrar | Fashion All</title>
+</head>
+<body>
+    <header class="container-fluid bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+          <a class="navbar-brand" href="index.html">Fashion All</a>
+    
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+              <ul class="navbar-nav col me-auto mb-2 mb-lg-0 justify-content-end">
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Todos departamentos
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="Dropdown dos tipos de produtos">
+                        <li><a class="dropdown-item" href="#">Camisetas</a></li>
+                        <li><a class="dropdown-item" href="#">Calças</a></li>
+                        <li><a class="dropdown-item" href="#">Sapatos</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Acessórios</a></li>
+                      </ul>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="login.html" class="btn btn-outline-light mx-1 my-sm-1">Logar</a>
+                </li>
+                <li class="nav-item">
+                  <a href="register.html" class="btn btn-outline-light mx-1 my-sm-1">Cadastrar</a>
+                </li>
+              </ul>
+            </div><!--menu-->
+        </nav>
+    </header>
+
+    <form class="container my-5">
+        <fieldset class="my-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" placeholder="Digite o seu e-mail..." class="form-control" id="email" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </fieldset>
+        <fieldset class="mb-3">
+          <label for="pass" class="form-label">Senha</label>
+          <input placeholder="Digite a sua senha..." type="password" class="form-control" id="pass">
+        </fieldset>
+        <fieldset class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="checkMe">
+          <label class="form-check-label" for="checkMe">Manter-me logado</label>
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>
