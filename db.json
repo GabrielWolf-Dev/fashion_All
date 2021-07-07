@@ -1,110 +1,110 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "product": "Camiseta Feminina(Branca)",
-            "preco": 60,
-            "img": "https://images.pexels.com/photos/6311652/pexels-photo-6311652.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            "type": "camiseta"
-        },
-        {
-            "id": 2,
-            "product": "Calça Social Masculina",
-            "preco": 186,
-            "img": "https://images.pexels.com/photos/5647184/pexels-photo-5647184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-            "type": "calças"
-        },
-        {
-            "id": 3,
-            "product": "Sapato social Masculino",
-            "preco": 120,
-            "img": "https://images.pexels.com/photos/3075078/pexels-photo-3075078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            "type": "calçados"
-        },
-        {
-            "id": 4,
-            "product": "Calça Masculina",
-            "preco": 89,
-            "img": "https://images.pexels.com/photos/3220386/pexels-photo-3220386.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            "type": "calças"
-        },
-        {
-            "id": 5,
-            "product": "Sapato Feminino",
-            "preco": 80,
-            "img": "https://images.pexels.com/photos/8609108/pexels-photo-8609108.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            "type": "calçados"
-        },
-        {
-            "id": 6,
-            "product": "Tênis Feminino",
-            "preco": 75,
-            "img": "https://images.pexels.com/photos/601177/pexels-photo-601177.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            "type": "calçados"
-        },
-        {
-            "id": 7,
-            "product": "Calça Jeans Feminina",
-            "preco": 123,
-            "img": "https://images.pexels.com/photos/1550049/pexels-photo-1550049.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            "type": "calças"
-        },
-        {
-            "id": 8,
-            "product": "Calça Jeans Masculina",
-            "preco": 114,
-            "img": "https://images.pexels.com/photos/3724367/pexels-photo-3724367.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            "type": "calças"
-        },
-        {
-            "id": 9,
-            "product": "Calça social Feminina",
-            "preco": 162,
-            "img": "https://images.pexels.com/photos/7036523/pexels-photo-7036523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-            "type": "calças"
-        },
-        {
-            "id": 11,
-            "product":"Camiseta Masculina(Branca)",
-            "preco": 60,
-            "img": "https://images.pexels.com/photos/6311136/pexels-photo-6311136.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            "type": "camiseta"
-        },
-        {
-            "id": 12,
-            "product": "Tênis Masculino",
-            "preco": 160,
-            "img": "https://images.pexels.com/photos/786003/pexels-photo-786003.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            "type": "calçados"
-        },
-        {
-            "id": 13,
-            "product": "Camiseta Feminina",
-            "preco": 55,
-            "img": "https://images.pexels.com/photos/3702587/pexels-photo-3702587.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            "type": "camiseta"
-        },
-        {
-            "id": 14,
-            "product": "Apple Watch",
-            "preco": 55,
-            "img": "https://images.pexels.com/photos/4482932/pexels-photo-4482932.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-            "type": "acessórios"
-        },
-        {
-            "id": 15,
-            "product": "Mochila",
-            "preco": 163,
-            "img": "https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            "type": "acessórios"
-        },
-        {
-            "id": 16,
-            "product": "Fone sem fio(Bluetooth)",
-            "preco": 345,
-            "img": "https://images.pexels.com/photos/3755913/pexels-photo-3755913.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-            "type": "acessórios"
-        }
-    ],
-    "accounts": []
+  "products": [
+    {
+      "id": 1,
+      "product": "Camiseta Feminina(Branca)",
+      "preco": 60,
+      "img": "https://images.pexels.com/photos/6311652/pexels-photo-6311652.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "camiseta"
+    },
+    {
+      "id": 2,
+      "product": "Calça Social Masculina",
+      "preco": 186,
+      "img": "https://images.pexels.com/photos/5647184/pexels-photo-5647184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "type": "calças"
+    },
+    {
+      "id": 3,
+      "product": "Sapato social Masculino",
+      "preco": 120,
+      "img": "https://images.pexels.com/photos/3075078/pexels-photo-3075078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "calçados"
+    },
+    {
+      "id": 4,
+      "product": "Calça Masculina",
+      "preco": 89,
+      "img": "https://images.pexels.com/photos/3220386/pexels-photo-3220386.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "calças"
+    },
+    {
+      "id": 5,
+      "product": "Sapato Feminino",
+      "preco": 80,
+      "img": "https://images.pexels.com/photos/8609108/pexels-photo-8609108.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "calçados"
+    },
+    {
+      "id": 6,
+      "product": "Tênis Feminino",
+      "preco": 75,
+      "img": "https://images.pexels.com/photos/601177/pexels-photo-601177.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "calçados"
+    },
+    {
+      "id": 7,
+      "product": "Calça Jeans Feminina",
+      "preco": 123,
+      "img": "https://images.pexels.com/photos/1550049/pexels-photo-1550049.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "calças"
+    },
+    {
+      "id": 8,
+      "product": "Calça Jeans Masculina",
+      "preco": 114,
+      "img": "https://images.pexels.com/photos/3724367/pexels-photo-3724367.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "calças"
+    },
+    {
+      "id": 9,
+      "product": "Calça social Feminina",
+      "preco": 162,
+      "img": "https://images.pexels.com/photos/7036523/pexels-photo-7036523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "type": "calças"
+    },
+    {
+      "id": 11,
+      "product": "Camiseta Masculina(Branca)",
+      "preco": 60,
+      "img": "https://images.pexels.com/photos/6311136/pexels-photo-6311136.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "camiseta"
+    },
+    {
+      "id": 12,
+      "product": "Tênis Masculino",
+      "preco": 160,
+      "img": "https://images.pexels.com/photos/786003/pexels-photo-786003.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "calçados"
+    },
+    {
+      "id": 13,
+      "product": "Camiseta Feminina",
+      "preco": 55,
+      "img": "https://images.pexels.com/photos/3702587/pexels-photo-3702587.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "camiseta"
+    },
+    {
+      "id": 14,
+      "product": "Apple Watch",
+      "preco": 55,
+      "img": "https://images.pexels.com/photos/4482932/pexels-photo-4482932.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "type": "acessórios"
+    },
+    {
+      "id": 15,
+      "product": "Mochila",
+      "preco": 163,
+      "img": "https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "acessórios"
+    },
+    {
+      "id": 16,
+      "product": "Fone sem fio(Bluetooth)",
+      "preco": 345,
+      "img": "https://images.pexels.com/photos/3755913/pexels-photo-3755913.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "type": "acessórios"
+    }
+  ],
+  "accounts": []
 }
