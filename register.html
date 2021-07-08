@@ -46,14 +46,14 @@
     <form class="container my-5" id="form">
         <div class="row">
             <fieldset class="col-md-6">
-                <label for="name" class="form-label">Nome</label>
+                <label for="name" class="form-label">Nome:</label>
                 <input type="text" placeholder="Digite o seu nome..." class="form-control" id="name" required>
                 <div class="invalid-feedback">
                   Deve-se conter nome e sobrenome com letra maiúscula e minúscula.
                 </div>
             </fieldset>
             <fieldset class="col-md-6">
-                <label for="cpf" class="form-label">CPF</label>
+                <label for="cpf" class="form-label">CPF:</label>
                 <input type="text" placeholder="Digite o seu CPF..." class="form-control" id="cpf" required>
                 <div class="invalid-feedback">
                   CPF inválido!
@@ -63,21 +63,30 @@
             </fieldset>
         </div>
         <fieldset class="my-3">
-          <label for="email" class="form-label">Email</label>
+          <label for="email" class="form-label">Email:</label>
           <input type="email" placeholder="Digite o seu e-mail..." class="form-control" id="email" aria-describedby="emailHelp" required>
           <div class="invalid-feedback">
             E-mail inválido!
           </div>
         </fieldset>
-        <fieldset class="mb-3">
-          <label for="pass" class="form-label">Senha</label>
-          <input placeholder="Digite a sua senha..." type="password" class="form-control" id="pass" required>
-          <div class="invalid-feedback">
-            Senha inválida! É necessário que tenha no mínimo 8 caracteres.
-            <br>
-            Dica: Procure fazer senhas longas e com caracteres variados.  
-          </div>
-        </fieldset>
+        <div class="row">
+          <fieldset class="col-md-6 mb-3">
+            <label for="pass" class="form-label">Senha:</label>
+            <input placeholder="Digite a sua senha..." type="password" class="form-control" id="pass" required>
+            <div class="invalid-feedback">
+              Senha inválida! É necessário que tenha no mínimo 8 caracteres.
+              <br>
+              Dica: Procure fazer senhas longas e com caracteres variados.  
+            </div>
+          </fieldset>
+          <fieldset class="col-md-6 mb-3">
+            <label for="pass" class="form-label">Confirmar Senha:</label>
+            <input placeholder="Confirmar senha" type="password" class="form-control" id="confirmPass" required>
+            <div class="invalid-feedback">
+              As senhas não conferem, confirme a senha novamente.
+            </div>
+          </fieldset>
+        </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     <script src="./app/register.js" type="module"></script>

@@ -4,6 +4,7 @@ export default class Validate {
     constructor(){
         this._dataPost = {};
         this._allValidated = false;
+        this._errorConfirmPass = false;
     }
 
     checkName(name){
@@ -12,7 +13,7 @@ export default class Validate {
 
         if(amount >= 2) {
             for(let i=0; i < amount; i++){
-                if(splitStrName[i].match(/^[A-Z]{1}[a-z]+$/)){
+                if(splitStrName[i].match(/^[A-Z]{1}[a-zçã]+$/)){
                     this._dataPost['name'] = name;
                 }else {
                     return false;  
@@ -44,11 +45,12 @@ export default class Validate {
     
     }
 
-    checkPass(password) {
+    checkPass(password, confirmPassword) {
         const regExp = /^[#?!@$%^&*-A-Za-z\d]{8,}$/;
 
         if(regExp.test(password)){
-            this._dataPost['password'] = password;
+            this._errorConfirmPass = false;
+            password === confirmPassword ? this._dataPost['password'] = password : this._errorConfirmPass = true;
         } else {
             return false;
         }
@@ -57,7 +59,11 @@ export default class Validate {
     postDatas(...inputs){
         this._allValidated = inputs.every(input => input.classList.contains('is-valid'));
 
-        if(this._allValidated === true)
+        if(this._allValidated === true){
             new Api('accounts').registerAccount(this._dataPost);
+            const loginLink = "http://127.0.0.1:5500/login.html";
+            alert("Cadastro realizado com sucesso!", window.location.href = loginLink);
+        }
+        
     }
 }

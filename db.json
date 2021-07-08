@@ -106,5 +106,13 @@
       "type": "acessórios"
     }
   ],
-  "accounts": []
+  "accounts": [
+    {
+      "name": "Pedro Joao",
+      "cpf": "222.333.444-90",
+      "email": "pedro_j@gmail.com",
+      "password": "12345678",
+      "id": 1
+    }
+  ]
 }
