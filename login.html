@@ -43,21 +43,21 @@
         </nav>
     </header>
 
-    <form class="container my-5">
+    <form class="container my-5" id="formLogin">
         <fieldset class="my-3">
           <label for="email" class="form-label">Email</label>
-          <input type="email" placeholder="Digite o seu e-mail..." class="form-control" id="email" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          <input type="email" placeholder="Digite o seu e-mail..." class="form-control" id="emailLog" aria-describedby="emailHelp" required>
         </fieldset>
         <fieldset class="mb-3">
           <label for="pass" class="form-label">Senha</label>
-          <input placeholder="Digite a sua senha..." type="password" class="form-control" id="pass">
-        </fieldset>
-        <fieldset class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="checkMe">
-          <label class="form-check-label" for="checkMe">Manter-me logado</label>
+          <input placeholder="Digite a sua senha..." type="password" class="form-control" id="passLog" required>
+          <div class="invalid-feedback">
+            Senha ou E-mail estão incorretos!
+          </div>
         </fieldset>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+
+    <script src="./app/login.js" type="module"></script>
 </body>
 </html>

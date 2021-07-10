@@ -6,9 +6,13 @@ export default class Api {
     }
 
     async getApi(){
-        const response = await fetch(this._defaultUrl + this._complementUrl + this._params);
-        const data = await response.json();
-        return data;
+        try{
+            const response = await fetch(this._defaultUrl + this._complementUrl + this._params);
+            const data = await response.json();
+            return data;
+        } catch(error) {
+            throw new Error(error);
+        } 
     }
 
     async registerAccount(data) {
@@ -19,8 +23,30 @@ export default class Api {
                 'content-type': 'application/json'
             }
         };
-        const response = await fetch(this._defaultUrl + this._complementUrl + this._params, postStructure);
-        const dataPost = await response.json();
-        return dataPost;
+        try{
+            const response = await fetch(this._defaultUrl + this._complementUrl + this._params, postStructure);
+            const dataPost = await response.json();
+            return dataPost;
+        } catch(error) {
+            throw new Error(error);
+        }
+    }
+
+    async insertToken(token){
+        const tokenStructure = {
+            method: "PATCH",
+            body: JSON.stringify(token),
+            headers: {
+                'content-type': 'application/json'
+            }
+        };
+
+        try {
+            const response = await fetch(this._defaultUrl + this._complementUrl + this._params, tokenStructure);
+            const dataPost = await response.json();
+            return dataPost;
+        } catch(error) {
+            throw new Error(error);
+        }
     }
 }

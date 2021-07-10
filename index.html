@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Fashion All</title>
@@ -17,7 +19,7 @@
           <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="menu">
-          <ul class="navbar-nav col me-auto mb-2 mb-lg-0 justify-content-end">
+          <ul class="navbar-nav col me-auto mb-2 mb-lg-0 justify-content-end" id="toggleAuth">
               <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Todos departamentos
@@ -26,8 +28,9 @@
                     <li><a class="dropdown-item" href="#">Camisetas</a></li>
                     <li><a class="dropdown-item" href="#">Calças</a></li>
                     <li><a class="dropdown-item" href="#">Sapatos</a></li>
-                    <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#">Acessórios</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Mostar todos os produtos</a></li>
                   </ul>
               </li>
             <li class="nav-item">
@@ -35,12 +38,6 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#Contact">Contato</a>
-            </li>
-            <li class="nav-item">
-              <a href="login.html" class="btn btn-outline-light mx-1 my-sm-1">Logar</a>
-            </li>
-            <li class="nav-item">
-              <a href="register.html" class="btn btn-outline-light mx-1 my-sm-1">Cadastrar</a>
             </li>
           </ul>
         </div><!--menu-->
@@ -91,7 +88,7 @@
     </section>
     <hr class="container my-5">
     <main class="container-fluid p-6" id="Products">
-        <h2 class="h2 text-center">Produtos</h2>
+        <h2 class="h2 text-center">Lançamentos!</h2>
         <div class="row justify-content-center" id="boxLastProducts"></div>
     </main>
 

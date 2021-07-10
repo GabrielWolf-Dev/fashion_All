@@ -9,16 +9,25 @@ export default class Input extends Validate{
         this._confirmPass = $('#confirmPass');
         this._email = $('#email');
         this._cpf = $('#cpf');
+        this._inputs = [
+            this._name,
+            this._cpf,
+            this._email,
+            this._pass,
+        ];
     }
     
     inputsRegister() {
-        this.messageUiValidation(this._name, this.checkName(this._name.value));
-        this.messageUiValidation(this._cpf, this.checkCpf(this._cpf.value));
-        this.messageUiValidation(this._email, this.checkEmail(this._email.value));
-        this.messageUiValidation(this._pass, this.checkPass(this._pass.value, this._confirmPass.value));
+        this.messageUiValidation(
+            this._inputs,
+            this.checkName(this._name.value),
+            this.checkCpf(this._cpf.value),
+            this.checkEmail(this._email.value),
+            this.checkPass(this._pass.value, this._confirmPass.value)
+        );
 
         
-        this.postDatas(
+        this.postAccount(
             this._name,
             this._pass,
             this._confirmPass,
@@ -29,14 +38,16 @@ export default class Input extends Validate{
 
     
 
-    messageUiValidation(input1, callback){
-        if(callback === false){
-            input1.classList.add("is-invalid");
-            input1.classList.remove("is-valid");
-        } else {
-            input1.classList.remove("is-invalid");
-            input1.classList.add("is-valid");
-        }
+    messageUiValidation(inputs, ...callback){
+        callback.forEach((callback, index) => {
+            if(callback === false){
+                inputs[index].classList.add("is-invalid");
+                inputs[index].classList.remove("is-valid");
+            } else {
+                inputs[index].classList.remove("is-invalid");
+                inputs[index].classList.add("is-valid");
+            }
+        });
 
         if(this._errorConfirmPass === true) {
             this._confirmPass.classList.add("is-invalid");

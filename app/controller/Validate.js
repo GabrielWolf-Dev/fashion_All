@@ -49,14 +49,14 @@ export default class Validate {
         const regExp = /^[#?!@$%^&*-A-Za-z\d]{8,}$/;
 
         if(regExp.test(password)){
-            this._errorConfirmPass = false;
             password === confirmPassword ? this._dataPost['password'] = password : this._errorConfirmPass = true;
         } else {
+            this._errorConfirmPass = true;
             return false;
         }
     }
 
-    postDatas(...inputs){
+    postAccount(...inputs){
         this._allValidated = inputs.every(input => input.classList.contains('is-valid'));
 
         if(this._allValidated === true){
@@ -65,5 +65,13 @@ export default class Validate {
             alert("Cadastro realizado com sucesso!", window.location.href = loginLink);
         }
         
+    }
+
+    async getAccounts() {
+        return await new Api('accounts').getApi();
+    }
+
+    async tokenAccount(id, token) {
+        return await new Api(`accounts/${id}`).insertToken({ token: token });
     }
 }
