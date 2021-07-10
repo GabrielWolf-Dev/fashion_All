@@ -1,6 +1,7 @@
-import DatasHome from "../controller/DatasHome.js";
+import Datas from "../controller/Datas.js";
+import Helpers from "../helpers.js";
 
-export default class ShowDatas extends DatasHome{
+export default class ShowDatas extends Datas {
     constructor(){
         super();
 
@@ -13,8 +14,8 @@ export default class ShowDatas extends DatasHome{
     }
 
     async showLastProducts() {
-        const lastProdResolved = await Promise.resolve(this._lastProducts); 
-
+        const lastProdResolved =  await Promise.resolve(this._lastProducts); 
+        console.log(lastProdResolved);
         lastProdResolved.forEach(data => {
             this._boxLastProducts.innerHTML += `
                 <div class="card text-center col-3 m-4" style="width: 25rem;">
@@ -30,21 +31,13 @@ export default class ShowDatas extends DatasHome{
     }
 
     async getAuthAccount() {
-        const getAccountResolved = await Promise.resolve(this._authAccount);
-        JSON.stringify(localStorage.setItem('token', getAccountResolved[0].token));
+        if(localStorage.getItem('userId') !== null){
+            const getAccountResolved = await Promise.resolve(this._authAccount);
+            JSON.stringify(localStorage.setItem('token', getAccountResolved[0].token));
 
-        this._toggleAuth.innerHTML += this.validateAuth(getAccountResolved[0]);
-    }
-
-    validateAuth(account) {
-        if(account.token === localStorage.getItem('token')){
-            return `
-                <li class="nav-item">
-                    <a href="account.html" class="btn btn-outline-light mx-1 my-sm-1">${account.name}</a>
-                </li>
-            `;
+            this._toggleAuth.innerHTML += new Helpers().validateHeader(getAccountResolved[0]);
         } else {
-            return `
+            this._toggleAuth.innerHTML += `
                 <li class="nav-item">
                     <a href="login.html" class="btn btn-outline-light mx-1 my-sm-1">Logar</a>
                 </li>

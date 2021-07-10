@@ -1,4 +1,5 @@
 import Validate from '../controller/Validate.js';
+import Helpers from '../helpers.js';
 
 export default class Input extends Validate{
     constructor(){
@@ -18,7 +19,7 @@ export default class Input extends Validate{
     }
     
     inputsRegister() {
-        this.messageUiValidation(
+        new Helpers().messageUiValidation(
             this._inputs,
             this.checkName(this._name.value),
             this.checkCpf(this._cpf.value),
@@ -34,20 +35,6 @@ export default class Input extends Validate{
             this._email,
             this._cpf
         );
-    }
-
-    
-
-    messageUiValidation(inputs, ...callback){
-        callback.forEach((callback, index) => {
-            if(callback === false){
-                inputs[index].classList.add("is-invalid");
-                inputs[index].classList.remove("is-valid");
-            } else {
-                inputs[index].classList.remove("is-invalid");
-                inputs[index].classList.add("is-valid");
-            }
-        });
 
         if(this._errorConfirmPass === true) {
             this._confirmPass.classList.add("is-invalid");

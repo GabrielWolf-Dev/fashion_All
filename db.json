@@ -108,18 +108,20 @@
   ],
   "accounts": [
     {
-      "name": "Pedro Joao",
-      "cpf": "222.333.444-90",
-      "email": "pedro_j@gmail.com",
+      "name": "Gabriel Mendes",
+      "cpf": "233.999.999-90",
+      "email": "g@gmail.com",
       "password": "12345678",
-      "id": 1
+      "id": 1,
+      "token": "f3d890fc575635a69fccc9790f"
     },
     {
-      "name": "Gabriel Wolf",
-      "cpf": "122.333.111-90",
-      "email": "gabriel@gmail.com",
-      "password": "12345678",
-      "id": 2
+      "name": "João Paulo",
+      "cpf": "222.222.222/77",
+      "email": "j@hotmail.com",
+      "password": "55555555",
+      "id": 2,
+      "token": "b20083508c44caf71967b58047"
     }
   ]
 }

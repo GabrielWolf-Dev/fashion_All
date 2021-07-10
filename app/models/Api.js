@@ -49,4 +49,34 @@ export default class Api {
             throw new Error(error);
         }
     }
+
+    async updateDatas(newDatas) {
+        const newDatasStructure = {
+            method: "PATCH",
+            body: JSON.stringify(newDatas),
+            headers: {
+                'content-type': 'application/json'
+            }
+        }
+
+        try {
+            const response = await fetch(this._defaultUrl + this._complementUrl + this._params, newDatasStructure);
+            const dataPost = await response.json();
+            return dataPost;
+        } catch(error) {
+            throw new Error(error);
+        }
+    }
+
+    async deleteAccountAuth() {
+        try {
+            const response = await fetch(this._defaultUrl + this._complementUrl + this._params, { 
+                method: "DELETE"
+            });
+            const dataPost = await response.json();
+            return dataPost;
+        } catch(error) {
+            throw new Error(error);
+        }
+    }
 }

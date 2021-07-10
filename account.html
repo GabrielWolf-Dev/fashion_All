@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Cadastrar | Fashion All</title>
 </head>
 <body>
@@ -16,7 +19,7 @@
               <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="menu">
-              <ul class="navbar-nav col me-auto mb-2 mb-lg-0 justify-content-end">
+              <ul class="navbar-nav col me-auto mb-2 mb-lg-0 justify-content-end" id="toggleAuth">
                   <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Todos departamentos
@@ -25,25 +28,25 @@
                         <li><a class="dropdown-item" href="#">Camisetas</a></li>
                         <li><a class="dropdown-item" href="#">Calças</a></li>
                         <li><a class="dropdown-item" href="#">Sapatos</a></li>
-                        <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Acessórios</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Mostar todos os produtos</a></li>
                       </ul>
                   </li>
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a href="login.html" class="btn btn-outline-light mx-1 my-sm-1">Logar</a>
-                </li>
-                <li class="nav-item">
-                  <a href="register.html" class="btn btn-outline-light mx-1 my-sm-1">Cadastrar</a>
-                </li>
               </ul>
             </div><!--menu-->
         </nav>
       </header>
 
-    <form class="container my-5" id="form">
+      <aside class="logout-box">
+        <div class="logout">
+            
+        </div>
+      </aside>
+
+      <h1 class="text-center mt-4" id="perfil"></h1>
+
+      <form class="container my-5" id="form">
         <div class="row">
             <fieldset class="col-md-6">
                 <label for="name" class="form-label">Nome:</label>
@@ -64,32 +67,31 @@
         </div>
         <fieldset class="my-3">
           <label for="email" class="form-label">Email:</label>
-          <input type="email" placeholder="Digite o seu e-mail..." class="form-control" id="email" aria-describedby="emailHelp" required>
+          <input disabled type="email" placeholder="Digite o seu e-mail..." class="form-control" id="email" aria-describedby="emailHelp" required>
           <div class="invalid-feedback">
             E-mail inválido!
           </div>
         </fieldset>
         <div class="row">
-          <fieldset class="col-md-6 mb-3">
-            <label for="pass" class="form-label">Senha:</label>
-            <input placeholder="Digite a sua senha..." type="password" class="form-control" id="pass" required>
-            <div class="invalid-feedback">
-              Senha inválida! É necessário que tenha no mínimo 8 caracteres.
-              <br>
-              Dica: Procure fazer senhas longas e com caracteres variados.  
-            </div>
-          </fieldset>
-          <fieldset class="col-md-6 mb-3">
-            <label for="pass" class="form-label">Confirmar Senha:</label>
-            <input placeholder="Confirmar senha" type="password" class="form-control" id="confirmPass" required>
-            <div class="invalid-feedback">
-              As senhas não conferem, confirme a senha novamente.
-            </div>
-          </fieldset>
+            <fieldset class="mb-3">
+                <label for="pass" class="form-label">Senha:</label>
+                <input disabled type="password" class="form-control" id="pass" required>
+              </fieldset>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Atualizar</button>
     </form>
+
+    <hr>
+
+    <aside class="container my-0">
+        <div class="my-4">
+            <button class="btn btn-primary" id="logout"><i class="fas fa-sign-out-alt"></i></button>
+            <label for="logout" class="ml-2">Sair da conta</label>
+        </div>
+        <button class="btn btn-danger" id="deleteBtn">Deletar conta</button>
+    </aside>
+
     <script src="./app/libs/bootstrap.bundle.min.js"></script>
-    <script src="./app/register.js" type="module"></script>
+    <script src="./app/account.js" type="module"></script>
 </body>
 </html>

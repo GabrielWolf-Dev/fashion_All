@@ -4,7 +4,6 @@ export default class Validate {
     constructor(){
         this._dataPost = {};
         this._allValidated = false;
-        this._errorConfirmPass = false;
     }
 
     checkName(name){
@@ -45,7 +44,7 @@ export default class Validate {
     
     }
 
-    checkPass(password, confirmPassword) {
+    checkPass(password, confirmPassword = password) {
         const regExp = /^[#?!@$%^&*-A-Za-z\d]{8,}$/;
 
         if(regExp.test(password)){
