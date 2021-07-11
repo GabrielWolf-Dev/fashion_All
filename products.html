@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cadastrar | Fashion All</title>
+</head>
+<body>
+    <header class="container-fluid bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+          <a class="navbar-brand" href="index.html">Fashion All</a>
+    
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+              <ul class="navbar-nav col me-auto mb-2 mb-lg-0 justify-content-end" id="toggleAuth">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                  </li>
+              </ul>
+            </div><!--menu-->
+        </nav>
+      </header>
+
+      <h1 class="text-center my-4" id="productsType">Produtos</h1>
+      <main class="container-fluid p-6">
+        <div class="row justify-content-center" id="allProducts"></div>
+      </main>
+
+    <script src="./app/libs/bootstrap.bundle.min.js"></script>
+    <script src="./app/products.js" type="module"></script>
+</body>
+</html>

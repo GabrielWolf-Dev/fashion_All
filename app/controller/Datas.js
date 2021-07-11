@@ -5,6 +5,10 @@ export default class Datas {
         return await new Api('products/', '?_sort=id&_order=desc&_limit=8').getApi();
     }
 
+    async allProducts() {
+        return await new Api('products/', '?_sort=id&_order=asc').getApi();
+    }
+
     async authAccount() {
         return await new Api('accounts', `?id=${JSON.parse(localStorage.getItem('userId'))}`).getApi();
     }
