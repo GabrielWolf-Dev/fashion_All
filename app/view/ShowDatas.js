@@ -1,5 +1,6 @@
 import Datas from "../controller/Datas.js";
 import Helpers from "../helpers.js";
+import Car from "../controller/Car.js";
 
 export default class ShowDatas extends Datas {
     constructor(){
@@ -13,13 +14,14 @@ export default class ShowDatas extends Datas {
 
     async showLastProducts() {
         const lastProdResolved =  await Promise.resolve(this.lastProducts()); 
-        console.log(lastProdResolved);
         lastProdResolved.forEach(data => this._boxLastProducts.innerHTML += this.productLayout(data));
+        new Car().addCar();
     }
 
     async showAllProducts() {
         const allProdResolved = await Promise.resolve(this.allProducts());
         allProdResolved.forEach(data => this._boxAllProducts.innerHTML += this.productLayout(data));
+        new Car().addCar();
     }
 
     async getAuthAccount() {
@@ -47,7 +49,7 @@ export default class ShowDatas extends Datas {
                 <div class="card-body">
                   <h5 class="card-title">${data.product}</h5>
                   <p class="card-text">R$${data.preco},00</p>
-                  <a href="#" class="btn btn-primary">Comprar</a>
+                  <button id="btnsAddCar" class="btn btn-primary">Comprar</button>
                 </div>
             </div>
         `;

@@ -122,6 +122,14 @@
       "password": "55555555",
       "id": 2,
       "token": "b20083508c44caf71967b58047"
+    },
+    {
+      "name": "Jonas Garcia",
+      "cpf": "222.333.111-90",
+      "email": "jon@uol.com.br",
+      "password": "88888888",
+      "id": 3,
+      "token": "b164f73cf52b8df279a2a69a4c"
     }
   ]
 }

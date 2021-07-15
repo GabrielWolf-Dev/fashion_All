@@ -1,5 +1,4 @@
 import Validate from '../controller/Validate.js';
-import Helpers from '../helpers.js';
 
 export default class InputLogin {
     constructor() {
