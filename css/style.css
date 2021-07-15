@@ -3,8 +3,32 @@
     border-radius: 12px;
 }
 
-.icon-bell {
+.icon-cart {
     font-size: 1.8rem;
     cursor: pointer;
     color: white;
+    position: relative;
+}
+
+.nav-item-cart {
+    position: relative;
+    padding: 14px 0;
+}
+
+.products-car {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #db2a3c;
+    color: white;
+    position: absolute;
+    top: -6px;
+    left: -18px;
+    text-align: center;
+}
+
+@media screen and (max-width: 993px) {
+    .nav-item-cart {
+        margin-top: 16px;
+    }
 }

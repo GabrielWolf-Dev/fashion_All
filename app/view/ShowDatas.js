@@ -44,7 +44,7 @@ export default class ShowDatas extends Datas {
 
     productLayout(data){
         return `
-            <div class="card text-center col-3 m-4" style="width: 25rem;">
+            <div class="card text-center col-3 m-4" style="width: 25rem;" data-id=${data.id}>
                 <img src="${data.img}" class="card-img-top p-2 d-block mx-auto" alt="${data.product}" style="height: 16rem; width:  12rem;">
                 <div class="card-body">
                   <h5 class="card-title">${data.product}</h5>

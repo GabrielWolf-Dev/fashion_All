@@ -1,6 +1,8 @@
 export default class Helpers {
     constructor() {
         this._errorConfirmPass = false;
+        
+        
     }
     
     validateHeader(account) {
@@ -9,8 +11,8 @@ export default class Helpers {
                 <li class="nav-item">
                     <a href="account.html" class="btn btn-outline-light mx-1 my-sm-1">${account.name}</a>
                 </li>
-                <li class="nav-item">
-                    <i class="fas fa-bell icon-bell mx-2"></i>
+                <li class="nav-item nav-item-cart mx-3">
+                    <i class="fas fa-shopping-cart icon-cart"></i>
                 </li>
             `;
         } else {
@@ -20,9 +22,6 @@ export default class Helpers {
                 </li>
                 <li class="nav-item">
                     <a href="register.html" class="btn btn-outline-light mx-1 my-sm-1">Cadastrar</a>
-                </li>
-                <li class="nav-item">
-                    <i class="fas fa-bell icon-bell mx-2"></i>
                 </li>
             `;
         }
