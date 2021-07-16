@@ -48,7 +48,7 @@ export default class ShowDatas extends Datas {
                 <img src="${data.img}" class="card-img-top p-2 d-block mx-auto" alt="${data.product}" style="height: 16rem; width:  12rem;">
                 <div class="card-body">
                   <h5 class="card-title">${data.product}</h5>
-                  <p class="card-text">R$${data.preco},00</p>
+                  <p class="card-text">R$ ${data.preco},00</p>
                   <button id="btnsAddCar" class="btn btn-primary">Comprar</button>
                 </div>
             </div>

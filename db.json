@@ -104,32 +104,23 @@
       "preco": 345,
       "img": "https://images.pexels.com/photos/3755913/pexels-photo-3755913.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       "type": "acessórios"
+    },
+    {
+      "id": 17,
+      "product": "Tênis Esportivo",
+      "preco": 423,
+      "img": "https://images.pexels.com/photos/1537671/pexels-photo-1537671.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "type": "sapatos"
     }
   ],
   "accounts": [
     {
-      "name": "Gabriel Mendes",
-      "cpf": "233.999.999-90",
-      "email": "g@gmail.com",
-      "password": "12345678",
-      "id": 1,
-      "token": "eb98061d4d1c48a854b85f85af"
-    },
-    {
-      "name": "João Paulo",
-      "cpf": "222.222.222/77",
-      "email": "j@hotmail.com",
+      "name": "Juan Gomes Vargas",
+      "cpf": "222.111.111-11",
+      "email": "juan@hotmail.com",
       "password": "55555555",
-      "id": 2,
-      "token": "b20083508c44caf71967b58047"
-    },
-    {
-      "name": "Jonas Garcia",
-      "cpf": "222.333.111-90",
-      "email": "jon@uol.com.br",
-      "password": "88888888",
-      "id": 3,
-      "token": "2ede748d48caba266bcf60df7c"
+      "id": 1,
+      "token": "1cf447e466b1ba4d41cd9403f2"
     }
   ]
 }

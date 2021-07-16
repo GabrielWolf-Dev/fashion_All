@@ -18,14 +18,14 @@ export default class Car {
         const navItemCart = document.querySelector('.nav-item-cart');
         
         if(token === localStorage.getItem('token')){
-            // Armazenando cada produto num array que vai ser enviado no LocalStorage:
+            // Storing each product in an array that will be shipped in LocalStorage:
             const productSelected = el.path[2];
             const productId = productSelected.dataset.id;
             this._arrProducts.push(productId);
             JSON.stringify(localStorage.setItem('productsId', this._arrProducts));
             this._productsStorage = Array.from(localStorage.getItem('productsId').split(','));
 
-            // Criando o span:
+            // Creating the span:
             const span = document.createElement('span');
             span.classList.add('products-car');
             span.textContent = this._productsStorage.length;
@@ -39,16 +39,35 @@ export default class Car {
 
     async showDatasCar() {
         const productsCar = document.querySelector('#productsCar');
+        const btnConfirmBuy = document.querySelector('#btnConfirmBuy');
+        let arrPrices = [];
         
         if(this._productsStorage.length === 0) {
-            productsCar.textContent = 'Você não adicionou algum produto no carrinho :(';
+            productsCar.textContent = 'Você não adicionou nenhum produto no seu carrinho :(';
         } else {
+            productsCar.textContent = '';
             const productsSelected = await new Api(
                 'products?',
                 this._productsStorage.map((productId, index) => index + 1 == this._productsStorage.length ? 'id=' + productId :
                 'id=' + productId + '&').join('')
             ).getApi();
-            console.log(productsSelected);
+
+            productsSelected.forEach(product => {
+                arrPrices.push(product.preco);
+                productsCar.innerHTML += `
+                    <div class="card my-2" style="width: 14rem;">
+                      <img class="card-img-top" src=${product.img} alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">${product.product}</h5>
+                        <p class="card-text">Preço: ${product.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
+                      </div>
+                    </div>
+                `;
+
+                btnConfirmBuy.addEventListener('click', () => window.location.href = 'https://www.paypal.com/br/signin');
+            });
+            const totalPrice = arrPrices.reduce((accumulator, currentValue) => accumulator + currentValue);
+            productsCar.innerHTML += `<h4 class="m-2">Total: ${totalPrice.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h4>`;
         }
     }
 
