@@ -12,7 +12,7 @@ export default class Helpers {
                     <a href="account.html" class="btn btn-outline-light mx-1 my-sm-1">${account.name}</a>
                 </li>
                 <li class="nav-item nav-item-cart mx-3">
-                    <i class="fas fa-shopping-cart icon-cart"></i>
+                    <i class="fas fa-shopping-cart icon-cart" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
                 </li>
             `;
         } else {
