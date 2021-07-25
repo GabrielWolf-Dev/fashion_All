@@ -33,7 +33,7 @@ export default class AccountConfig extends Validate {
     }
 
     showAccount(datasApi) {
-        this._toggleAuth.innerHTML += new Helpers().validateHeader(datasApi);
+        this._toggleAuth.insertAdjacentHTML('beforeend', new Helpers().validateHeader(datasApi));
         this._perfilTitle.textContent = 'Perfil de ' + datasApi.name;
 
         this._name.value = datasApi.name;

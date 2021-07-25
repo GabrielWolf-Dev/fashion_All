@@ -54,7 +54,7 @@ export default class Car {
 
             productsSelected.forEach(product => {
                 arrPrices.push(product.preco);
-                productsCar.innerHTML += `
+                productsCar.insertAdjacentHTML('beforeend', `
                     <div class="card my-2" style="width: 14rem;">
                       <img class="card-img-top" src=${product.img} alt="Card image cap">
                       <div class="card-body">
@@ -62,12 +62,12 @@ export default class Car {
                         <p class="card-text">Preço: ${product.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
                       </div>
                     </div>
-                `;
+                `);
 
                 btnConfirmBuy.addEventListener('click', () => window.location.href = 'https://www.paypal.com/br/signin');
             });
             const totalPrice = arrPrices.reduce((accumulator, currentValue) => accumulator + currentValue);
-            productsCar.innerHTML += `<h4 class="m-2">Total: ${totalPrice.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h4>`;
+            productsCar.insertAdjacentHTML('beforeend', `<h4 class="m-2">Total: ${totalPrice.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h4>`);
         }
     }
 

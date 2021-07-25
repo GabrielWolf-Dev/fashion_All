@@ -14,13 +14,13 @@ export default class ShowDatas extends Datas {
 
     async showLastProducts() {
         const lastProdResolved =  await Promise.resolve(this.lastProducts()); 
-        lastProdResolved.forEach(data => this._boxLastProducts.innerHTML += this.productLayout(data));
+        lastProdResolved.forEach(data => this._boxLastProducts.insertAdjacentHTML('beforeend',  this.productLayout(data)));
         new Car().addCar();
     }
 
     async showAllProducts() {
         const allProdResolved = await Promise.resolve(this.allProducts());
-        allProdResolved.forEach(data => this._boxAllProducts.innerHTML += this.productLayout(data));
+        allProdResolved.forEach(data => this._boxAllProducts.insertAdjacentHTML('beforeend', this.productLayout(data)));
         new Car().addCar();
     }
 
@@ -29,16 +29,16 @@ export default class ShowDatas extends Datas {
             const getAccountResolved = await Promise.resolve(this.authAccount());
             JSON.stringify(localStorage.setItem('token', getAccountResolved[0].token));
 
-            this._toggleAuth.innerHTML += new Helpers().validateHeader(getAccountResolved[0]);
+            this._toggleAuth.insertAdjacentHTML('beforeend', new Helpers().validateHeader(getAccountResolved[0]));
         } else {
-            this._toggleAuth.innerHTML += `
+            this._toggleAuth.insertAdjacentHTML('beforeend', `
                 <li class="nav-item">
                     <a href="login.html" class="btn btn-outline-light mx-1 my-sm-1">Logar</a>
                 </li>
                 <li class="nav-item">
                     <a href="register.html" class="btn btn-outline-light mx-1 my-sm-1">Cadastrar</a>
                 </li>
-            `;
+            `);
         }
     }
 
